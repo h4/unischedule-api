@@ -9,7 +9,7 @@ def hello_world():
     return '[]'
 
 
-@app.route('/get_faculties')
+@app.route('/api/get_faculties')
 def faculties():
     data = {
         "faculties": [
@@ -42,7 +42,7 @@ def faculties():
     return jsonify(data)
 
 
-@app.route('/get_chairs')
+@app.route('/api/get_chairs')
 def chairs():
     data = {
         "chairs": [
@@ -79,7 +79,7 @@ def chairs():
     return jsonify(data)
 
 
-@app.route('/get_chairs_group')
+@app.route('/api/get_chairs_group')
 def chairs_group():
     data = {
         "groups": [
@@ -268,7 +268,7 @@ def chairs_group():
     return jsonify(data)
 
 
-@app.route('/get_schedule')
+@app.route('/api/get_schedule')
 def schedule():
     data = {
         "group_name": "13101/4",
