@@ -42,70 +42,43 @@ def faculties():
     return jsonify(data)
 
 
-@app.route('/api/get_chairs')
-def chairs():
-    data = {
-        "chairs": [
-            {
-                "chair_abbr": "СУЗиС",
-                "chair_id": 0,
-                "chair_name": "Строительство уникальных зданий и сооружений",
-            },
-            {
-                "chair_abbr": "ВиГС",
-                "chair_id": 1,
-                "chair_name": "Водохозяйственное и гидротехническое строительство",
-            },
-            {
-                "chair_abbr": "ГСиПЭ",
-                "chair_id": 2,
-                "chair_name": "Гражданское строительство и прикладная экология",
-            },
-            {
-                "chair_id": 3,
-                "chair_name": "Гидравлика",
-            },
-            {
-                "chair_abbr": "СМиСК",
-                "chair_id": 4,
-                "chair_name": "Строительная механика и строительные конструкции",
-            },
-            {
-                "chair_id": 5,
-                "chair_name": "Сопротивление материалов",
-            },
-        ]
-    }
-    return jsonify(data)
-
-
-@app.route('/api/get_chairs_group')
+@app.route('/api/get_groups')
 def chairs_group():
     data = {
+        "faculty": {
+            "faculty_name": "Институт машиностроения \"ЛМЗ-ВТУЗ\"",
+            "faculty_id": 0,
+        },
         "groups": [
             {
                 "group_name": "13101/4",
-                "group_id": "13774"
+                "group_id": "13774",
+                "group_level": 1,
             },
             {
                 "group_name": "23101/4",
-                "group_id": "13775"
+                "group_id": "13775",
+                "group_level": 2,
             },
             {
                 "group_name": "33101/4",
-                "group_id": "13776"
+                "group_id": "13776",
+                "group_level": 3,
             },
             {
                 "group_name": "53101/10",
-                "group_id": "13777"
+                "group_id": "13777",
+                "group_level": 5,
             },
             {
                 "group_name": "63101/10",
-                "group_id": "13778"
+                "group_id": "13778",
+                "group_level": 6,
             },
             {
                 "group_name": "з13101/1",
-                "group_id": "13779"
+                "group_id": "13779",
+                "group_level": 1,
             },
             {
                 "group_name": "з13101/7",
@@ -113,155 +86,193 @@ def chairs_group():
             },
             {
                 "group_name": "23101/5",
-                "group_id": "13781"
+                "group_id": "13781",
+                "group_level": 2,
             },
             {
                 "group_name": "13101/5",
-                "group_id": "13782"
+                "group_id": "13782",
+                "group_level": 1,
             },
             {
                 "group_name": "53101/15",
-                "group_id": "13783"
+                "group_id": "13783",
+                "group_level": 5,
             },
             {
                 "group_name": "63101/13",
-                "group_id": "13784"
+                "group_id": "13784",
+                "group_level": 6,
             },
             {
                 "group_name": "63101/15",
-                "group_id": "13785"
+                "group_id": "13785",
+                "group_level": 6,
             },
             {
                 "group_name": "33101/5",
-                "group_id": "13786"
+                "group_id": "13786",
+                "group_level": 3,
             },
             {
                 "group_name": "33101/6",
-                "group_id": "13787"
+                "group_id": "13787",
+                "group_level": 3,
             },
             {
                 "group_name": "33101/1",
-                "group_id": "13788"
+                "group_id": "13788",
+                "group_level": 3,
             },
             {
                 "group_name": "53101/3",
-                "group_id": "13789"
+                "group_id": "13789",
+                "group_level": 5,
             },
             {
                 "group_name": "23101/3",
-                "group_id": "13790"
+                "group_id": "13790",
+                "group_level": 2,
             },
             {
                 "group_name": "33101/3",
-                "group_id": "13791"
+                "group_id": "13791",
+                "group_level": 3,
             },
             {
                 "group_name": "63101/14",
-                "group_id": "13792"
+                "group_id": "13792",
+                "group_level": 6,
             },
             {
                 "group_name": "з43101/7",
-                "group_id": "13793"
+                "group_id": "13793",
+                "group_level": 4,
             },
             {
                 "group_name": "з53101/8",
-                "group_id": "13794"
+                "group_id": "13794",
+                "group_level": 5,
             },
             {
                 "group_name": "з53101/7",
-                "group_id": "13795"
+                "group_id": "13795",
+                "group_level": 5,
             },
             {
                 "group_name": "43101/13",
-                "group_id": "13796"
+                "group_id": "13796",
+                "group_level": 4,
             },
             {
                 "group_name": "43101/15",
-                "group_id": "13797"
+                "group_id": "13797",
+                "group_level": 4,
             },
             {
                 "group_name": "43101/16",
-                "group_id": "13798"
+                "group_id": "13798",
+                "group_level": 4,
             },
             {
                 "group_name": "53101/16",
-                "group_id": "13799"
+                "group_id": "13799",
+                "group_level": 5,
             },
             {
                 "group_name": "з33101/1",
-                "group_id": "13800"
+                "group_id": "13800",
+                "group_level": 3,
             },
             {
                 "group_name": "з43101/1",
-                "group_id": "13801"
+                "group_id": "13801",
+                "group_level": 4,
             },
             {
                 "group_name": "з53101/1",
-                "group_id": "13802"
+                "group_id": "13802",
+                "group_level": 5,
             },
             {
                 "group_name": "з63101/1",
-                "group_id": "13803"
+                "group_id": "13803",
+                "group_level": 6,
             },
             {
                 "group_name": "з33101/2",
-                "group_id": "13804"
+                "group_id": "13804",
+                "group_level": 3,
             },
             {
                 "group_name": "з53101/2",
-                "group_id": "13805"
+                "group_id": "13805",
+                "group_level": 5,
             },
             {
                 "group_name": "з63101/2",
-                "group_id": "13806"
+                "group_id": "13806",
+                "group_level": 6,
             },
             {
                 "group_name": "53101/2",
-                "group_id": "13807"
+                "group_id": "13807",
+                "group_level": 5,
             },
             {
                 "group_name": "з53101/4",
-                "group_id": "13808"
+                "group_id": "13808",
+                "group_level": 5,
             },
             {
                 "group_name": "53101/5",
-                "group_id": "13809"
+                "group_id": "13809",
+                "group_level": 5,
             },
             {
                 "group_name": "53101/7",
-                "group_id": "13810"
+                "group_id": "13810",
+                "group_level": 5,
             },
             {
                 "group_name": "53101/4",
-                "group_id": "13811"
+                "group_id": "13811",
+                "group_level": 5,
             },
             {
                 "group_name": "13101/1",
-                "group_id": "13812"
+                "group_id": "13812",
+                "group_level": 1,
             },
             {
                 "group_name": "23101/1",
-                "group_id": "13813"
+                "group_id": "13813",
+                "group_level": 2,
             },
             {
                 "group_name": "53101/11",
-                "group_id": "13814"
+                "group_id": "13814",
+                "group_level": 5,
             },
             {
                 "group_name": "63101/11",
-                "group_id": "13815"
+                "group_id": "13815",
+                "group_level": 6,
             },
             {
                 "group_name": "43101/10",
-                "group_id": "13816"
+                "group_id": "13816",
+                "group_level": 4,
             },
             {
                 "group_name": "з53101/3",
-                "group_id": "13817"
+                "group_id": "13817",
+                "group_level": 5,
             },
             {
                 "group_name": "53101/1",
-                "group_id": "13818"
+                "group_id": "13818",
+                "group_level": 5,
             },
         ]
     }
@@ -566,4 +577,4 @@ def schedule():
 
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug=True)
