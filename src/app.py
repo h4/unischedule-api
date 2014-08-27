@@ -46,8 +46,8 @@ def faculties():
 def chairs_group():
     data = {
         "faculty": {
-            "faculty_name": "Институт машиностроения \"ЛМЗ-ВТУЗ\"",
-            "faculty_id": 0,
+            "faculty_name": "Инженерно-строительный институт",
+            "faculty_id": 1,
         },
         "groups": [
             {
