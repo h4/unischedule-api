@@ -576,5 +576,29 @@ def schedule():
     return jsonify(data)
 
 
+@app.route('/api/search')
+def search():
+    data = {
+        "result": [
+            {
+                "group_name": "13101/4",
+                "group_id": "13774",
+                "group_level": 1,
+            },
+            {
+                "group_name": "23101/4",
+                "group_id": "13775",
+                "group_level": 2,
+            },
+            {
+                "group_name": "33101/4",
+                "group_id": "13776",
+                "group_level": 3,
+            },
+        ]
+    }
+    return jsonify(data)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
