@@ -82,7 +82,8 @@ def chairs_group():
             },
             {
                 "group_name": "з13101/7",
-                "group_id": "13780"
+                "group_id": "13780",
+                "group_level": 1,
             },
             {
                 "group_name": "23101/5",
